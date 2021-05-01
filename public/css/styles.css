@@ -1,0 +1,154 @@
+html, body {
+    padding: 0;
+    margin: 0;
+
+    background-color: #282A36 !important;
+    color: lightgray !important;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+.container {
+    padding: 32px !important;
+    padding-top: 128px !important;
+
+    max-width: 1090px !important;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.9em !important;
+    color: lightgreen;
+}
+
+h2 {
+    font-size: 1.6em !important;
+    color: coral;
+    margin: 0 !important;
+    margin-top: 64px !important;
+}
+
+h3 {
+    margin: 0 !important;
+    margin-top: 12px !important;
+    margin-bottom: 24px !important;
+    font-size: 1em !important;
+}
+
+a {
+    color: darkgray !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: lightgrey !important;
+}
+
+input {
+    background-color: #282A36;
+    border: 2px solid #3d3f4f;
+    color: lightgray;
+    width: 100%;
+    outline: none;
+    padding: 5px;
+    padding-left: 9px;
+}
+
+input::placeholder {
+    color: #54576a;
+}
+
+input:hover {
+    border: 2px solid #4c4f61;
+}
+
+.item-search {
+    max-width: 512px;
+    transition: all 0.15s ease;
+}
+
+.items {
+    margin-top: 16px !important;
+}
+
+.item {
+    cursor: pointer;
+    padding: 8px;
+    padding-left: 12px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    max-width: 256px !important;
+    min-width: 256px !important;
+    transition: all 0.1s ease;
+}
+
+.item:hover {
+    background-color: #2d2f3cfd;
+}
+
+.item-top {
+    display: flex;
+    font-size: 1.1em !important;
+}
+
+.item-icon {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.item-title {
+    margin-left: 8px;
+}
+
+.item-bottom {
+    display: flex;
+}
+
+.item-status {
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-left: 5px;
+    margin-right: 8px;
+    height: 6px;
+    width: 6px;
+}
+
+.up .item-status {
+    background-color: greenyellow;
+}
+
+.down .item-status {
+    background-color: red;
+}
+
+.item-description {
+    font-size: 0.9em;
+    color: darkgray !important;
+}
+
+.item-port {
+    font-size: 0.9em;
+    color: grey !important;
+    margin-left: 5px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 5px;
+    font-size: 0.78em;
+    color: darkgray;
+    display: flex;
+}
+
+.footer .separator {
+    padding-left: 8px;
+    padding-right: 8px;
+}

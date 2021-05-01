@@ -1,9 +1,30 @@
+.theme-dark {
+    --background: #282A36;
+    
+    --heading: lightgreen;
+    --subheading: coral;
+    --category: lightblue;
+
+    --text-primary: lightgrey;
+    --text-secondary: darkgrey;
+    --text-tertiary: grey;
+
+    --input-border-primary: #3d3f4f;
+    --input-border-secondary: #4c4f61;
+    --input-engine: #3c3f4f;
+
+    --item-hover: #2d2f3cfd;
+    --item-status-up: greenyellow;
+    --item-status-down: red;
+    --item-status-timeout: orange;
+}
+
 html, body {
     padding: 0;
     margin: 0;
 
-    background-color: #282A36 !important;
-    color: lightgray !important;
+    background-color: var(--background) !important;
+    color: var(--text-primary) !important;
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -24,13 +45,13 @@ html, body {
 }
 
 h1 {
-    font-size: 2.9em !important;
-    color: lightgreen;
+    font-size: 3em !important;
+    color: var(--heading);
 }
 
 h2 {
-    font-size: 1.6em !important;
-    color: coral;
+    font-size: 1.7em !important;
+    color: var(--subheading);
     margin: 0 !important;
     margin-top: 64px !important;
 }
@@ -38,40 +59,68 @@ h2 {
 h3 {
     margin: 0 !important;
     margin-top: 12px !important;
+    margin-bottom: 14px !important;
+    font-size: 1.1em !important;
+    height: 18px;
+    color: var(--category);
+}
+
+h4 {
+    margin: 0 !important;
+    margin-top: 12px !important;
     margin-bottom: 24px !important;
     font-size: 1em !important;
+    height: 18px;
 }
 
 a {
-    color: darkgray !important;
+    color: var(--text-secondary) !important;
     text-decoration: none !important;
 }
 
 a:hover {
-    color: lightgrey !important;
+    color: var(--text-primary) !important;
 }
 
-input {
-    background-color: #282A36;
-    border: 2px solid #3d3f4f;
-    color: lightgray;
+.search {
+    background-color: transparent;
+    border: 2px solid var(--input-border-primary);
     width: 100%;
     outline: none;
     padding: 5px;
-    padding-left: 9px;
-}
-
-input::placeholder {
-    color: #54576a;
-}
-
-input:hover {
-    border: 2px solid #4c4f61;
-}
-
-.item-search {
     max-width: 512px;
     transition: all 0.15s ease;
+    height: 36px;
+    display: flex;
+}
+
+.search > input {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-left: 4px;
+}
+
+.search > input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.hidden {
+    display: none;
+}
+
+.search > .engine {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    background-color: var(--input-engine);
+    font-size: 0.9em;
+}
+
+.search:hover, .search:focus {
+    border: 2px solid var(--input-border-secondary);
 }
 
 .items {
@@ -91,12 +140,12 @@ input:hover {
 }
 
 .item:hover {
-    background-color: #2d2f3cfd;
+    background-color: var(--item-hover);
 }
 
 .item-top {
     display: flex;
-    font-size: 1.1em !important;
+    font-size: 1.06em !important;
 }
 
 .item-icon {
@@ -106,6 +155,7 @@ input:hover {
 
 .item-title {
     margin-left: 8px;
+    color: var(--text-primary);
 }
 
 .item-bottom {
@@ -114,29 +164,34 @@ input:hover {
 
 .item-status {
     border-radius: 50%;
-    margin-top: 8px;
-    margin-left: 5px;
+    margin-top: 6px;
+    margin-left: 4px;
     margin-right: 8px;
-    height: 6px;
-    width: 6px;
+    height: 8px;
+    width: 8px;
+    background-color: var(--text-secondary);
 }
 
 .up .item-status {
-    background-color: greenyellow;
+    background-color: var(--item-status-up);
 }
 
 .down .item-status {
-    background-color: red;
+    background-color: var(--item-status-down);
+}
+
+.timeout .item-status {
+    background-color: var(--item-status-timeout);
 }
 
 .item-description {
     font-size: 0.9em;
-    color: darkgray !important;
+    color: var(--text-secondary) !important;
 }
 
 .item-port {
     font-size: 0.9em;
-    color: grey !important;
+    color: var(--text-tertiary) !important;
     margin-left: 5px;
 }
 
@@ -144,11 +199,20 @@ input:hover {
     position: absolute;
     bottom: 5px;
     font-size: 0.78em;
-    color: darkgray;
+    color: var(--text-secondary);
     display: flex;
 }
 
 .footer .separator {
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.subtext {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+.bookmarks {
+    margin-top: 4px !important;
 }

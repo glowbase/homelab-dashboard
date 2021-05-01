@@ -1,0 +1,40 @@
+{
+    "applications": [
+        {
+            "name": "pfSense",
+            "description": "Firewall router",
+            "url": "https://10.0.0.1",
+            "icon": "wall"
+        },
+        {
+            "name": "Portainer",
+            "description": "Docker manager",
+            "url": "https://10.1.0.10",
+            "icon": "rows"
+        },
+        {
+            "name": "vCenter",
+            "description": "Server management",
+            "url": "https://10.4.0.1/ui/",
+            "icon": "monitor"
+        },
+        {
+            "name": "PRTG",
+            "description": "Server monitoring",
+            "url": "https://10.3.0.1",
+            "icon": "gauge"
+        },
+        {
+            "name": "SF Drafting",
+            "description": "Drafting services",
+            "url": "https://sfdrafting.com.au",
+            "icon": "pencil"
+        },
+        {
+            "name": "Cloudflare DNS",
+            "description": "Domain name server",
+            "url": "https://1.1.1.1",
+            "icon": "globe"
+        }
+    ]
+}

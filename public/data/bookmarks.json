@@ -1,5 +1,44 @@
 {
     "bookmarks": [
-        
+        {
+            "name": "Category 1",
+            "links": [
+                {
+                    "name": "Link 1",
+                    "url": "https://link.com",
+                    "icon": "link"
+                },
+                {
+                    "name": "Link 2",
+                    "url": "https://link.com",
+                    "icon": "link"
+                },
+                {
+                    "name": "Link 3",
+                    "url": "https://link.com",
+                    "icon": "link"
+                },
+                {
+                    "name": "Link 4",
+                    "url": "https://link.com",
+                    "icon": "link"
+                }
+            ]
+        },
+        {
+            "name": "Category 2",
+            "links": [
+                {
+                    "name": "Link 1",
+                    "url": "https://link.com",
+                    "icon": "link"
+                },
+                {
+                    "name": "Link 2",
+                    "url": "https://link.com",
+                    "icon": "link"
+                }
+            ]
+        }
     ]
 }

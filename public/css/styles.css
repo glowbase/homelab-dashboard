@@ -59,7 +59,7 @@ h2 {
 h3 {
     margin: 0 !important;
     margin-top: 12px !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 18px !important;
     font-size: 1.1em !important;
     height: 18px;
     color: var(--category);
@@ -215,4 +215,13 @@ a:hover {
 
 .bookmarks {
     margin-top: 4px !important;
+}
+
+.bookmark {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.bookmark .item-title {
+    font-size: 0.9em;
 }

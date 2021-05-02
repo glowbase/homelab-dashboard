@@ -116,16 +116,10 @@ function loadApplications(applications) {
     const list = document.querySelector('.applications');
 
     if (applications.length === 0) {
-        list.innerHTML = `
-            <div class="subtext">You don't have any applications...</div>
-        `;
-
-        return;
+        return list.innerHTML = `<div class="subtext">You don't have any applications...</div>`;
     }
 
-    applications.forEach(application => {
-        addApplication(application);
-    });
+    applications.forEach(application => addApplication(application));
 }
 
 
@@ -204,26 +198,54 @@ function loadBookmarks(bookmarks) {
     const list = document.querySelector('.bookmarks');
    
     if (bookmarks.length === 0) {
-        list.innerHTML += `
-             <div class="subtext">You don't have any bookmarks...</div>
-        `;
-
-        return;
+        return list.innerHTML += `<div class="subtext">You don't have any bookmarks...</div>`;
     }
 
-    // TODO: Figure out how to get bookmarks to work with categories    
-    bookmarks.forEach(bookmark => {
-        const { name, url, icon } = bookmark;
+    bookmarks.forEach(category => {
+        const { name, links } = category;
 
-        list.innerHTML += `
-            <a class="item bookmark col" id="${url}" href="${url}">
-                <div class="item-top">
-                    <i class="item-icon ph-${icon}"></i>
-                    <div class="item-title">${name}</div>
-                </div>
-            </a>
-        `;
+        // Create category
+        addBookmarkCategory(name);
+
+        links.forEach(link => {
+            addBookmarkLink(link, name);
+        });
     });
+}
+
+
+/**
+ * 
+ * @param {*} category 
+ */
+function addBookmarkCategory(category) {
+    const list = document.querySelector('.bookmarks');
+
+    list.innerHTML += `
+        <div class="col-3" id="${category}">
+            <h3>${category}</h3>	
+        </div>
+    `;
+}
+
+
+/**
+ * 
+ * @param {*} link 
+ * @param {*} category 
+ */
+function addBookmarkLink(link, category) {
+    const list = document.getElementById(category);
+    const { name, url, icon } = link;
+
+    list.innerHTML += `
+        <a class="item bookmark col" id="${url}" href=${url}>
+            <div class="item-top">
+                <i class="item-icon ph-${icon}"></i>
+                <div class="item-title">${name}</div>
+            </div>
+        </a>
+    `;
 }
 
 
